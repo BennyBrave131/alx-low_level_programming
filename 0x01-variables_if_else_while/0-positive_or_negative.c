@@ -4,7 +4,7 @@
 #include <stdio.h>
 /* betty style doc for function main goes there */
 /**
- * main - Entry point
+ * main - 0-positive_or_negative.c
  *
  * Description: prints "Positive anything is better than negative nothing"
  *
