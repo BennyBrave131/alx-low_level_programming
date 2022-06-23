@@ -33,5 +33,4 @@ int getNumPrim(int num, int i)
 	else
 		return (getNumPrim(num, i + 1));
 }
-© 2022 GitHub, Inc.
 
