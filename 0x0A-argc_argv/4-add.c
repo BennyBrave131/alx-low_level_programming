@@ -1,33 +1,29 @@
-#include <stdio.h>
 #include <stdlib.h>
-
+#include <stdio.h>
+#include "main.h"
 /**
- * main - function that prints the sum ob positive numbers
- * @argc: argument count
- * @argv: an array of the argument
- * Return: 0
+ * main - entry point
+ * @argc: counter
+ * @argv: array of string
+ * Return: int
  */
-
 int main(int argc, char *argv[])
 {
-	int num, addNum, a, b, c;
+	int i, digit;
+	int sum = 0;
 
-	for (a = 1; a < argc; a++)
+	for (i = 1; i < argc; i++)
 	{
-		for (b = 0; argv[a][b] != '\0'; b++)
+		for (digit = 0; argv[i][digit]; digit++)
 		{
-			if (argv[a][b] > '9' || argv[a][b] < '0')
+			if (argv[i][digit] < '0' || argv[i][digit] > '9')
 			{
 				printf("Error\n");
-				return (1);
+				return (i);
 			}
 		}
+		sum += atoi(argv[i]);
 	}
-	for (c = 1; c < argc; c++)
-	{
-		num = atoi(argv[c]);
-		addNum += num;
-	}
-	printf("%d\n", addNum);
-	return (0);
+		printf("%d\n", sum);
+		return (0);
 }
