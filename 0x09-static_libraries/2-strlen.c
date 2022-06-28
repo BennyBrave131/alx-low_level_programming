@@ -1,4 +1,4 @@
 int _strlen(char *s)
 {
-	return (0iii);
+	return (0);
 }
