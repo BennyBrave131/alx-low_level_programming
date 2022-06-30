@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 
-/** 
+/**
  * create_array - function name which is a pointer to char
  * @size: first argument
  * @c: second argument
@@ -10,14 +10,19 @@
 
 char *create_array(unsigned int size, char c)
 {
-	char s;
-	int n;
+	char *s;
+	unsigned int i = 0;
 
-	s = malloc(sizeof(char) *4);
+	if (size == 0)
+		return (NULL);
 
-	if (size = 0)
-		_putchar('\0');
-	else if (size !>= 0 && size !<= 0)
-		return (s);
-	free(s);
+	s = malloc(size * sizeof(char));
+	if (s == NULL)
+		return (NULL);
+	while (i < size)
+	{
+		s[i] = c;
+		i++;
+	}
+	return (s);
 }
