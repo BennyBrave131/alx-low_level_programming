@@ -1,20 +1,17 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
- * free_grid - function that frees earlier created 2-dimensional array
- * @grid: first argument
- * @height: second argument
+ * free_grid - frees the grid created in task 3
+ * @grid: multidimensional array of integers
+ * @height: height of grid
  * Return: 0
  */
-
 void free_grid(int **grid, int height)
 {
-	int a;
-
-	for (a = 0; a < height; a++)
+	if (grid != NULL && height != 0)
 	{
-		free(grid[a]);
+		for (; height >= 0; height--)
+			free(grid[height]);
+		free(grid);
 	}
-	free(grid);
 }
