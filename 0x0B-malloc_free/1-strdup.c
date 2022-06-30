@@ -1,11 +1,32 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include "main.h"
+#include <stdlib.h>
 
-int _putchar(char c);
-char *create_array(unsigned int size, char c);
-char *_strdup(char *str);
-char *str_concat(char *s1, char *s2);
-int **alloc_grid(int width, int height);
-void free_grid(int **grid, int height);
+/**
+ * _strdup - a function that returns a pointer to a new string duplicated
+ * @str: string
+ * Return: NULL if str is NULL
+ */
 
-#endif
+char *_strdup(char *str)
+{
+	char *n;
+	int a = 1;
+	int b = 0;
+
+	while (str[a])
+		a++;
+	n = malloc(a * sizeof(char) + 1);
+	free(n);
+
+	if (n == NULL)
+		return (NULL);
+	else if (str == NULL)
+		return (NULL);
+	while (b < a)
+	{
+		n[b] = str[b];
+		b++;
+	}
+	n[b] = '\0';
+	return (n);
+}
